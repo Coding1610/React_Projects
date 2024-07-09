@@ -1,0 +1,33 @@
+.header{
+    flex: 1.2;
+    overflow-y: scroll;
+}
+
+.header p{
+    line-height: 1.88rem;
+    display: flex;
+    justify-content: flex-end;
+    color: #242424
+}
+
+.headerHistory p{
+    font-size: 1.1rem;
+}
+
+.headerInput{
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.headerInput p{
+    white-space: nowrap;
+    min-width: 100%;
+    width: fit-content;
+    font-weight:bold;
+    font-size: 1.3rem;
+}
+
+.headerResult{
+    font-size: 2rem;
+    font-weight:bold;
+}

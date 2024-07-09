@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.mainContainer{
+    --bgColor:#e4e4e4;
+    --calColor:#f6f8f9b3;
+    --modeBtnColor:#00000000;
+}
+
+.mainContainer[dark-theme]{
+    --bgColor:#e4e4e4;
+    --calColor:#f6f8f9b3;
+    --modeBtnColor:#ffffff00; 
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.mainContainer{
+    background-color: var(--bgColor);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.calContainer{
+    background-color: var(--calColor);
+    width: 20rem;
+    height: 580px;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    box-shadow: 0px 9px 15px -3px rgba(0,0,0,0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.customScroll::-webkit-scrollbar{
+    height: 3px;
+    width: 5px;
+}
+
+.customScroll::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+.customScroll::-webkit-scrollbar-thumb{
+    background-color: rgba(0,0,0,0.14);
+}
+
+.customScroll::-webkit-scrollbar-thumb:hover{
+    background-color: gray;
+}
+
+.titleBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.title{
+    font-size: 15rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.modeBtn{
+    width: 25px;
+    height: 25px;
+    /* background-color: black; */
+    position: absolute;
+    border-radius: 50%;
+}
+
+.modeBtn:hover{
+    cursor: pointer;
+}
+
+
+@media (max-width:1240px) {
+    .title{
+        font-size: 12rem;
+    }
+}
+
+@media (max-width:1030px) {
+    .title{
+        font-size: 10rem;
+    }
+}
+
+@media (max-width:850px) {
+    .title{
+        font-size: 8rem;
+    }
+}
+
+@media (max-width:680px) {
+    .title{
+        font-size: 6rem;
+    }
+}
+
+@media (max-width:550px) {
+    .title{
+        margin-top: 1rem;
+        font-size: 3rem;
+    }
+    .titleBox{
+        align-items: start;
+    }
+}
