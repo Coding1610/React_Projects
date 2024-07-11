@@ -1,17 +1,29 @@
-import React from 'react'
+import React, { useEffect , useRef } from 'react'
 import './Header.css'
 
-export default function Header() {
+export default function Header(props) {
+
+  const resultRef = useRef();
+  const expressionRef = useRef();
+
+  useEffect( () => {
+  resultRef.current.scrollIntoView({behavior:"smooth"});
+  },[props.history]);
+
+  useEffect( () => {
+    expressionRef.current.scrollLeft = expressionRef.current.scrollWidth;
+  },[props.expression]);
+
   return (
     <>
     <div className='header customScroll'>
         <div className='headerHistory customScroll'>
-          <p>History</p>
+          { props.history && props.history.map((item,index) => <p className='historyP' key={index+Math.random()*12}>{item}</p>)}
         </div>
-        <div className='headerInput customScroll'>
-            <p>Expression</p>
+        <div ref={expressionRef} className='headerInput customScroll'>
+            <p>{props.expression}</p>
         </div>
-        <p className='headerResult'> Result</p>
+        <p ref={resultRef} className='headerResult'>{props.result}</p>
     </div>
     </>
   )
