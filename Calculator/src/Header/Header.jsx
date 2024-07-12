@@ -8,7 +8,7 @@ export default function Header(props) {
 
   useEffect( () => {
   resultRef.current.scrollIntoView({behavior:"smooth"});
-  },[props.history]);
+  },[props.expression,props.history]);
 
   useEffect( () => {
     expressionRef.current.scrollLeft = expressionRef.current.scrollWidth;

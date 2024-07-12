@@ -119,7 +119,7 @@ export default function App() {
     // Result Button
     if( e.target.id === "result"){
 
-      const tempHistory = [...history];
+      let tempHistory = [...history];
       if( tempHistory.length > 20 ){
         tempHistory = tempHistory.splice(0,1);
       }
