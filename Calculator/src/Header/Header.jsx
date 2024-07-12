@@ -7,7 +7,7 @@ export default function Header(props) {
   const expressionRef = useRef();
 
   useEffect( () => {
-  resultRef.current.scrollIntoView({behavior:"smooth"});
+  resultRef.current.scrollIntoView();
   },[props.expression,props.history]);
 
   useEffect( () => {

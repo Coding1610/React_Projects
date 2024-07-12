@@ -65,6 +65,9 @@ export default function App() {
 
     // Manage Operator
     if( e.target.id === "operator" ){
+      if( expression.length === 0 && e.target.value === '-' ){
+        setExpression(expression+e.target.value);
+      }
       if( expression.length === 0 ){
         return;
       }
