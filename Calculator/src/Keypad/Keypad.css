@@ -22,8 +22,8 @@
     justify-content: center;
     cursor: pointer;
     border: none;
-    color:#242424;
     font-size: 1.5rem;
+    color:#242424;
 }
 
 .key:hover{

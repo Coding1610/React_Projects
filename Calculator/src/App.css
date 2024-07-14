@@ -73,7 +73,6 @@
     cursor: pointer;
 }
 
-
 @media (max-width:1240px) {
     .title{
         font-size: 12rem;

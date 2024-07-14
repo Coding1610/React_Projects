@@ -23,7 +23,7 @@ export default function Header(props) {
         <div ref={expressionRef} className='headerInput customScroll'>
             <p>{props.expression}</p>
         </div>
-        <p ref={resultRef} className='headerResult'>{props.result}</p>
+        <p ref={resultRef} className='headerResult'> {props.result} </p>
     </div>
     </>
   )
