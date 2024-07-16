@@ -1,5 +1,3 @@
-
-
 .sidebar{
     min-height: 100vh;
     display: flex;
@@ -32,9 +30,14 @@
     cursor: pointer;
 }
 
+.newChat:hover{
+    background-color: #dcdee1;
+}
+
 .sidebar .recent{
     display: flex;
     flex-direction: column;
+    animation: fadeIn 1.5s;
 }
 
 .sidebar .recentTitle{
@@ -65,4 +68,12 @@
 .sidebar .bottomItems{
     padding-right: 10px;
     cursor: pointer;
+}
+
+@media (max-width:600px){
+
+    .sidebar{
+        display: none;
+    }
+    
 }

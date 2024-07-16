@@ -24,6 +24,7 @@
     font-size: 56px;
     color: #c4c7c5;
     font-weight: 20px;
+    padding-left: 20px;
 }
 
 .main .greet span{
@@ -34,7 +35,7 @@
 
 .main .cards{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(180px,1fr))0;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
     gap: 15px;
     padding: 20px;
 }
@@ -168,4 +169,38 @@
     font-size: 17px;
     line-height: 1.8;
     font-weight: 400;
+}
+
+@media (max-width:600px){
+
+    .mainBottom input{
+        flex: none;
+        width: 150px;
+    }
+
+    .mainBottom img{
+        width: 20px;
+    }
+
+    .searchBox{
+        margin-top: 10px;
+        padding: 5px 10px;
+    }
+
+    .searchBox div{
+        gap: 5px;
+    }
+
+    .main .bottomInfo{
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width:800px){
+
+    .main .bottomInfo{
+        font-size: 11px;
+    }
+
 }

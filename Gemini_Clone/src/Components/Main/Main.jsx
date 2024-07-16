@@ -79,7 +79,7 @@ export default function Main() {
                     <div className='inputImg'>
                         <img src={assets.gallery_icon} alt="gallery_icon" />
                         <img src={assets.mic_icon} alt="mic_icon" />
-                        <img onClick={() => onSent()} src={assets.send_icon} alt="send_icon" />
+                        {input?<img onClick={() => onSent()} src={assets.send_icon} alt="send_icon" />:null}
                     </div>
                 </div>
 

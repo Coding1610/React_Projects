@@ -1,10 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Sidebar.css'
 import { assets } from '../../Images/assets'
+import { Context } from '../../Context/Context';
 
 export default function Sidebar() {
 
     const [extended,setextended] = useState(false);
+
+    const {onSent,previousPrompt,setRecentPrompt,newChat} = useContext(Context);
+
+    const loadPrompt = async (prompt) => {
+        setRecentPrompt(prompt);
+        await onSent(prompt);
+    };
+
+    useEffect( () => {
+        localStorage.setItem("recent-history",JSON.stringify(previousPrompt));
+    },[previousPrompt]);
 
   return (
     <>
@@ -14,7 +26,7 @@ export default function Sidebar() {
 
             <img onClick={() => setextended(prev=>!prev)} className='menu' src={assets.menu_icon} alt="menu_icon" />
 
-            <div className='newChat'>
+            <div className='newChat' onClick={() => newChat()}>
                 <img src={assets.plus_icon} alt="plus_icon" />
                 {extended ? <p>New Chat</p> : null}
             </div>
@@ -22,10 +34,13 @@ export default function Sidebar() {
             {extended ? 
             <div className='recent'>
                 <p className='recentTitle'>Recent</p>
-                <div className='recentEntry'>
-                    <img src={assets.message_icon} alt="message_icon" />
-                    <p>What is React ...</p>
-                </div>
+                {previousPrompt.map((item,index) => {
+                    return(
+                        <div className='recentEntry' onClick={() => loadPrompt(item)} key={index+Math.random()*3}>
+                            <img src={assets.message_icon} alt="message_icon" />
+                            <p>{item.slice(0,18)}...</p>
+                        </div>
+                    )} )}
             </div>
             : null}   
 
