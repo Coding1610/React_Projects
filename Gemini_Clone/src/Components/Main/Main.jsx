@@ -22,7 +22,7 @@ export default function Main() {
 
             <>
             <div className='greet'>
-                <p><span>Hello, YASH</span></p>
+                <p><span>Hello, USER</span></p>
                 <p>How can I help you today ? </p>
             </div>
 
