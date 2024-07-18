@@ -20,13 +20,13 @@ export default function Weather() {
         "03d" : assets.cloud_icon,
         "03n" : assets.cloud_icon,
         "04d" : assets.drizzle_icon,
-        "04n" : assets.snow_icon,
+        "04n" : assets.drizzle_icon,
         "09d" : assets.rain_icon,
         "09n" : assets.rain_icon,
         "10d" : assets.rain_icon,
         "10n" : assets.rain_icon,
         "13d" : assets.snow_icon,
-        "13n" : assets.drizzle_icon
+        "13n" : assets.snow_icon
     }
 
     const search = async (city) => {
