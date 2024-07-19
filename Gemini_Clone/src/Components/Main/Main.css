@@ -204,3 +204,13 @@
     }
 
 }
+
+@media (max-width:350px){
+
+    .main .bottomInfo{
+        font-size: 9px;
+    }
+
+}
+
+/* bottomInfo */
