@@ -36,9 +36,9 @@ export default function App() {
             backgroundImage: `url('https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
         }}
     >
-        <div className="w-[500px] shadow-xl">
+        <div className="md:w-[500px] shadow-xl sm:w-[400px] w-[300px]">
 
-            <div className="w-[500px] border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+            <div className="md:w-[500px] sm:w-[400px] w-[300px] border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
 
                 <form onSubmit={(e) => { e.preventDefault(); }}>
 
