@@ -101,12 +101,12 @@ export default function Navbar() {
             Book Listing
           </NavLink>
           <NavLink
-            to="/login"
+            to="/register"
             className={({ isActive }) =>
               isActive ? "outline-none" : "text-black outline-none"
             }
           >
-            Login
+            Register
           </NavLink>
         </div>
       </nav>
