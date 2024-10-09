@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useFirebaseContext } from "../Context/Firebase";
 import Card from "../Components/Card";
-import Login_Page from "../Pages/Login_Page";
+import Login_Page from "./Login_Page";
 
 export default function Order_Page() {
 
@@ -32,6 +32,7 @@ export default function Order_Page() {
         <div className="flex gap-4 flex-wrap justify-center">
           {books.map((book) => (
             <Card
+              value={"Order"}
               link={`/book/order/${book.id}`}
               key={book.id}
               id={book.id}

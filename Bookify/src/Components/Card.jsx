@@ -37,7 +37,7 @@ export default function Card(props) {
         onClick={handleBook}
       >
         {" "}
-        Details{" "}
+        {props.value}{" "}
       </button>
     </div>
   );

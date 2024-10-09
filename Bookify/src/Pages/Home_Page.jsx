@@ -33,6 +33,7 @@ export default function Home_Page() {
         <div className="flex gap-4 flex-wrap justify-center">
           {books.map((book) => (
             <Card
+              value={"Details"}
               link={`/book/view/${book.id}`}
               key={book.id}
               id={book.id}
