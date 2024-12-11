@@ -1,7 +1,8 @@
 import React from "react";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { useFirebaseContext } from "../Context/Firebase";
+import Register_Page from "./Register_Page";
 
 export default function List_Page() {
 
@@ -36,8 +37,20 @@ export default function List_Page() {
     setAuthor("");
   };
 
-  if( !firebase.isLoggedIn ){
-    navigate("/login");
+  // if( !firebase.isLoggedIn ){
+  //   navigate("/login");
+  // }
+
+  useEffect(() => {
+    if (firebase.isLoggedIn) {
+      firebase
+        .fetchMyBooks(firebase.user.email)
+        .then((books) => setBooks(books.docs));
+    }
+  }, [firebase]);
+
+  if (!firebase.isLoggedIn) {
+    return <Register_Page />;
   }
 
   return (

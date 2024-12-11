@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useFirebaseContext } from "../Context/Firebase";
 import Card from "../Components/Card";
 import Login_Page from "./Login_Page";
+import Register_Page from "./Register_Page";
 
 export default function Order_Page() {
 
@@ -19,7 +20,7 @@ export default function Order_Page() {
   }, [firebase]);
 
   if (!firebase.isLoggedIn) {
-    return <Login_Page />;
+    return <Register_Page />;
   }
 
   return (

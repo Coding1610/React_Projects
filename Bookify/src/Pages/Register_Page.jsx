@@ -78,7 +78,7 @@ export default function Register_Page() {
             </div>
             <div className="w-[80%]">
               <button
-                onClick={(e) => navigate("/login")}
+                onClick={(e) => navigate("/login(logout)")}
                 type="submit"
                 className="w-[100%] bg-blue-800 text-white rounded-md py-3 text-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:bg-blue-700 shadow-lg hover:shadow-xl"
               >

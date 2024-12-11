@@ -2,7 +2,7 @@ import { createContext, useContext , useEffect , useState} from "react";
 import {initializeApp} from 'firebase/app'
 import { getFirestore , collection , addDoc , getDocs , getDoc , doc , query , where, queryEqual } from 'firebase/firestore'
 import { getStorage , ref , uploadBytes , getDownloadURL } from 'firebase/storage'
-import { getAuth , createUserWithEmailAndPassword , signInWithEmailAndPassword , GoogleAuthProvider , signInWithPopup , GithubAuthProvider , onAuthStateChanged } from 'firebase/auth'
+import { getAuth , createUserWithEmailAndPassword , signInWithEmailAndPassword , GoogleAuthProvider , signInWithPopup , GithubAuthProvider , onAuthStateChanged , signOut } from 'firebase/auth'
 
 // Create Context
 const FirebaseContext = createContext(null);
@@ -65,6 +65,18 @@ export const FirebaseProvider = (props) => {
 
     // Login With Github
     const loginWithGithub = () => signInWithPopup(firebaseAuth,githubAuth).then((res) => alert("Login With Github"));
+
+    // Logout Function
+    const logOut = async () => {
+        try {
+            await signOut(firebaseAuth); // Properly sign out the user
+            setUser(null); // Reset the user state
+            alert("Logout Successful");
+        } catch (error) {
+            console.error("Error during logout:", error);
+            alert("Failed to logout. Please try again.");
+        }
+    };
 
     // Handle Book Listing
     const handleBooks =  async(title,language,isbn,categories,price,author,coverImg) => {
@@ -138,8 +150,9 @@ export const FirebaseProvider = (props) => {
     };
 
     return(
-        <FirebaseContext.Provider value={{signUpWithEmailAndPassword,signInUserWithEmailAndPassword,loginWithGoogle,loginWithGithub,isLoggedIn,handleBooks,getBookList,getImageURL,getBookDetails,placeOrder,fetchMyBooks,user,fetchBookOrders}}>
+        <FirebaseContext.Provider value={{signUpWithEmailAndPassword,signInUserWithEmailAndPassword,loginWithGoogle,loginWithGithub,isLoggedIn,logOut,handleBooks,getBookList,getImageURL,getBookDetails,placeOrder,fetchMyBooks,user,fetchBookOrders}}>
             {props.children}
         </FirebaseContext.Provider>
     )
+
 }

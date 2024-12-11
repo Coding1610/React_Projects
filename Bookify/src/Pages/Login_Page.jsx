@@ -12,12 +12,12 @@ export default function Register_Page() {
   const [password, setPassword] = useState("");
 
   // If User have already Account
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (firebase.isLoggedIn) {
-      navigate("/");
-    }
-  }, [firebase, navigate]);
+  // const navigate = useNavigate();
+  // useEffect(() => {
+  //   if (firebase.isLoggedIn) {
+  //     navigate("/");
+  //   }
+  // }, [firebase, navigate]);
 
   // Sign Up
   const handleSignUp = async (e) => {
@@ -69,22 +69,25 @@ export default function Register_Page() {
             </div>
             <div className="w-[80%]">
               <button
-                onClick={(e) => navigate("/register")}
-                type="submit"
-                className="w-[100%] bg-blue-800 text-white rounded-md py-3 text-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:bg-blue-700 shadow-lg hover:shadow-xl"
-              >
-                {" "}
-                Register{" "}
-              </button>
-            </div>
-            <div className="w-[80%]">
-              <button
                 onClick={handleSignUp}
                 type="submit"
                 className="w-[100%] bg-blue-800 text-white rounded-md py-3 text-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:bg-blue-700 shadow-lg hover:shadow-xl"
               >
                 {" "}
                 Login{" "}
+              </button>
+            </div>
+            <div className="w-[80%]">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  firebase.logOut();
+                }}
+                type="button"
+                className="w-[100%] bg-blue-800 text-white rounded-md py-3 text-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:bg-blue-700 shadow-lg hover:shadow-xl"
+              >
+                {" "}
+                Logout{" "}
               </button>
             </div>
             <div className="flex gap-6">

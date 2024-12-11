@@ -14,7 +14,9 @@ export default function Navbar() {
   return (
     <>
       <nav className="max-w-screen bg-slate-500 text-white justify-evenly p-4 text-xl outline-none">
+
         <div className="sm:flex justify-evenly hidden">
+
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -59,6 +61,18 @@ export default function Navbar() {
             }
           >
             Register
+          </NavLink>
+
+          <NavLink
+            is
+            to="/login(logout)"
+            className={({ isActive }) =>
+              isActive
+                ? "outline-none sm:block hidden"
+                : "text-black outline-none sm:block hidden"
+            }
+          >
+            Login/Logout
           </NavLink>
         </div>
 
@@ -107,6 +121,15 @@ export default function Navbar() {
             }
           >
             Register
+          </NavLink>
+          <NavLink
+            is
+            to="/login(logout)"
+            className={({ isActive }) =>
+              isActive ? "outline-none" : "text-black outline-none"
+            }
+          >
+            Login/Logout
           </NavLink>
         </div>
       </nav>

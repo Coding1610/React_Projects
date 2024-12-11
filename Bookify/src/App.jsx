@@ -17,7 +17,7 @@ export default function App() {
         <Routes>
           <Route path='/' element={<Home_Page/>}/>
           <Route path='/register' element={<Register_Page/>}/>
-          <Route path='/login' element={<Login_Page/>}></Route>
+          <Route path='/login(logout)' element={<Login_Page/>}></Route>
           <Route path='/booklists' element={<List_Page/>}/>
           <Route path='/book/view/:bookID' element={<BookDetails_Page/>} />
           <Route path='/book/order' element={<Order_Page/>}/>
