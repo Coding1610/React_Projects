@@ -22,12 +22,15 @@ A robust and user-friendly currency converter application built using React and 
 - API key from a currency exchange API provider.
 
 ### API
-    ```bash
+   ```bash
+    https://latest.currency-api.pages.dev/v1/currencies/${currency}.json
+   ```
   
 ### Clone the repository:
    ```bash
      https://github.com/Coding1610/React_Projects/tree/main/Calculator
    ```
+
 ### Live Website
    ```bash
     https://675933138a4bdc31655038de--sensational-cheesecake-8576ff.netlify.app/
