@@ -22,7 +22,7 @@ A simple and user-friendly calculator application built using React, HTML, and C
 
 ### Clone the repository:
    ```bash
-   https://github.com/Coding1610/React_Projects/edit/main/Calculator
+   https://github.com/Coding1610/React_Projects/tree/main/Calculator
    ```
 ### Live Website
    ```bash
