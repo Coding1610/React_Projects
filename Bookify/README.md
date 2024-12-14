@@ -35,7 +35,7 @@ Bookify is a web application built using React and Firebase that allows users to
 ### Steps to Run the Project
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Coding1610/React_Projects/Bookify.git
+   https://github.com/Coding1610/React_Projects/tree/main/Bookify
    ```
 2. Live Website
    ```bash
