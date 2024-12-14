@@ -1,16 +1,42 @@
-# React + Vite
+# Password Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Password Generator is a responsive web application that allows users to create secure passwords with customizable options. Users can set the password length and choose the inclusion of capital letters, small letters, numbers, symbols, or a combination of these.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Works seamlessly on all devices, including desktops, tablets, and mobile phones.
+- **Customizable Password Length**: Generate passwords with a length between 6 and 20 characters.
+- **Character Options**:
+  - Include capital letters
+  - Include small letters
+  - Include numbers
+  - Include symbols
+  - Generate passwords with a mixture of all options
+- **Secure and Random**: Ensures that generated passwords are strong and random for enhanced security and you can copy that password.
 
+## Tools and Technologies Used
 
-Theory
+- **Frontend**: HTML, CSS, JavaScript, React
+- **Development Tools**: Visual Studio Code
 
-1. Hook : useCallback()
+## Project Setup
+
+### Prerequisites
+- Node.js installed on your machine.
+
+### Clone the repository:
+   ```bash
+   https://github.com/Coding1610/React_Projects/tree/main/Password_Generator
+   ```
+   
+### Live Website
+   ```bash
+   https://675935885f838714ee8a975c--steady-unicorn-5809ef.netlify.app/
+   ```
+
+### Theory
+
+## 1. Hook : useCallback()
 
 const variableName = useCallback( () => {} , [depe_1 , depe_2 , .. ] );
 
@@ -21,14 +47,14 @@ const variableName = useCallback( () => {} , [depe_1 , depe_2 , .. ] );
 --> Dependencies use for Optimization
 --> Ye hook sari dependencies ko use karke cache me store karta haii
 
-2. Hook : useEffect()
+## 2. Hook : useEffect()
 
 useEffect( () => { functionCall() } , [depe_1 , depe_2 , depe_3 ..] );
 
 --> Page Load hone pe first time call hoga & Change of any dependencies par call hoga
 --> It is call functionCall() on change of every Dependencies
 
-3. Hook : useRef()
+## 3. Hook : useRef()
 
 const variableName = useEffect(initialValue);
 
