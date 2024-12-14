@@ -25,10 +25,10 @@ A robust and user-friendly currency converter application built using React and 
     ```bash
   
 ### Clone the repository:
-     ```bash
-     git clone https://github.com/Coding1610/React_Projects/Currency_Converter
-     ```
+   ```bash
+     https://github.com/Coding1610/React_Projects/tree/main/Calculator
+   ```
 ### Live Website
-    ```bash
-    https://your-live-currency-converter-link.netlify.app/
-    ```
+   ```bash
+    https://675933138a4bdc31655038de--sensational-cheesecake-8576ff.netlify.app/
+   ```
