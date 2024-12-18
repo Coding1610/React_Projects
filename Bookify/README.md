@@ -32,7 +32,7 @@ Bookify is a web application built using React and Firebase that allows users to
 - Node.js installed on your machine.
 - Firebase account to set up the backend.
 
-### Clone the repository:
+### Clone The Repository
    ```bash
    https://github.com/Coding1610/React_Projects/tree/main/Bookify
    ```
