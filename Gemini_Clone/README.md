@@ -19,7 +19,7 @@ Gemini Clone is a responsive website inspired by the original Gemini platform. T
 ### Prerequisites
 - Node.js installed on your machine.
 
-### Clone the repository:
+### Clone The Repository
    ```bash
    https://github.com/Coding1610/React_Projects/tree/main/Gemini_Clone
    ```
