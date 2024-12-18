@@ -20,7 +20,7 @@ A simple and user-friendly calculator application built using React, HTML, and C
 ### Prerequisites
 - Node.js installed on your machine.
 
-### Clone the repository:
+### Clone The Repository
    ```bash
    https://github.com/Coding1610/React_Projects/tree/main/Calculator
    ```
