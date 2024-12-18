@@ -28,7 +28,7 @@ The Weather App is a responsive web application that allows users to search for 
 - Node.js installed on your machine.
 - API key from a weather service provider (e.g., OpenWeatherMap).
 
-### Clone the repository:
+### Clone The Repository
    ```bash
    https://github.com/Coding1610/React_Projects/tree/main/Weather_App
    ```
