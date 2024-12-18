@@ -26,7 +26,7 @@ Edusity is a responsive clone website designed with engaging animations and mult
 - Node.js installed on your machine.
 - Web3 Forms account for form submission API.
 
-### Clone the repository:
+### Clone The Repository
    ```bash
    https://github.com/Coding1610/React_Projects/tree/main/Example_Website
    ```
