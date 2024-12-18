@@ -26,7 +26,7 @@ A robust and user-friendly currency converter application built using React and 
     https://latest.currency-api.pages.dev/v1/currencies/${currency}.json
    ```
   
-### Clone the repository:
+### Clone The Repository
    ```bash
      https://github.com/Coding1610/React_Projects/tree/main/Calculator
    ```
