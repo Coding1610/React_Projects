@@ -26,5 +26,5 @@ Gemini Clone is a responsive website inspired by the original Gemini platform. T
    
 ### Live Website
    ```bash
-   https://6759368776be0635baf57608--mellow-faloodeh-fe13ce.netlify.app/
+   https://react-projects-gemini-clone.vercel.app/
    ```
