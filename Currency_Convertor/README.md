@@ -33,5 +33,5 @@ A robust and user-friendly currency converter application built using React and 
 
 ### Live Website
    ```bash
-    https://675933138a4bdc31655038de--sensational-cheesecake-8576ff.netlify.app/
+    https://react-projects-currency-converter.vercel.app/
    ```
