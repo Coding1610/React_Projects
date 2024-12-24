@@ -33,5 +33,5 @@ Edusity is a responsive clone website designed with engaging animations and mult
    
 ### Live Website
   ```bash
-  https://6759351c27463a1e1c7a8ea2--fanciful-alfajores-cd238a.netlify.app/
+  https://react-projects-edusity-clone.vercel.app/
   ```
