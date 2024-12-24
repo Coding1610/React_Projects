@@ -35,5 +35,5 @@ The Weather App is a responsive web application that allows users to search for 
 
 ### Live Website
   ```bash
-   https://67592d05e2439ffc5fdb3ee5--inspiring-youtiao-087e11.netlify.app/
+   https://react-projects-weather-app.vercel.app/
   ```
