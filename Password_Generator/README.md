@@ -31,5 +31,5 @@ The Password Generator is a responsive web application that allows users to crea
    
 ### Live Website
    ```bash
-   https://675935885f838714ee8a975c--steady-unicorn-5809ef.netlify.app/
+   https://react-projects-password-generater.vercel.app/
    ```
