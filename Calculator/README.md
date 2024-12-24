@@ -26,5 +26,5 @@ A simple and user-friendly calculator application built using React, HTML, and C
    ```
 ### Live Website
    ```bash
-   https://6759387fafa27420ac5c7e7a--statuesque-dasik-4ec161.netlify.app/
+   https://react-projects-calculator.vercel.app/
    ```
