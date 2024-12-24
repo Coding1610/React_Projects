@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useFirebaseContext } from "../Context/Firebase";
+import toast from "react-hot-toast";
+import {Toaster} from 'react-hot-toast'
 
 export default function BookDetails_Page() {
   
@@ -39,12 +41,26 @@ export default function BookDetails_Page() {
     );
   }
 
+  // Notification For Order Placed
+  const notifyOrderBooked = () => {
+    toast.success("Order Placed",
+    {
+      icon:'📥',
+      style:{
+        backgroundColor:'black',
+        color:'white',
+      }
+    }
+    )
+  };
+
   // Place Order
   const handleOrders = async () => {
     if (firebase.isLoggedIn) {
       const result = await firebase
         .placeOrder(param.bookID, qty)
-        .then((res) => alert("Order Placed"));
+        notifyOrderBooked();
+        // .then((res) => alert("Order Placed"));
     } else {
       navigate("/register");
     }
@@ -149,6 +165,7 @@ export default function BookDetails_Page() {
             />
           </div>
         </div>
+        <Toaster position="bottom-center"/>
       </div>
     </>
   );

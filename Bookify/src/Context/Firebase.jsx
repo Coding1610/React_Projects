@@ -3,6 +3,7 @@ import {initializeApp} from 'firebase/app'
 import { getFirestore , collection , addDoc , getDocs , getDoc , doc , query , where, queryEqual } from 'firebase/firestore'
 import { getStorage , ref , uploadBytes , getDownloadURL } from 'firebase/storage'
 import { getAuth , createUserWithEmailAndPassword , signInWithEmailAndPassword , GoogleAuthProvider , signInWithPopup , GithubAuthProvider , onAuthStateChanged , signOut } from 'firebase/auth'
+import toast, { Toaster } from "react-hot-toast";
 
 // Create Context
 const FirebaseContext = createContext(null);
@@ -61,20 +62,42 @@ export const FirebaseProvider = (props) => {
     const signInUserWithEmailAndPassword = (email,password) => signInWithEmailAndPassword( firebaseAuth , email , password );
 
     // Login With Google 
-    const loginWithGoogle = () => signInWithPopup(firebaseAuth,googleAuth).then((res) => alert("Login With Google"));
+    const loginWithGoogle = () => signInWithPopup(firebaseAuth,googleAuth).then((res) => toast.success("Successful Login with Google",{
+        style:{
+            backgroundColor:'black',
+            color:'white',
+          }
+    }));
 
     // Login With Github
-    const loginWithGithub = () => signInWithPopup(firebaseAuth,githubAuth).then((res) => alert("Login With Github"));
+    const loginWithGithub = () => signInWithPopup(firebaseAuth,githubAuth).then((res) => toast.success("Successful Login With Github",{
+        style:{
+            backgroundColor:'black',
+            color:'white',
+          }
+    }));
 
     // Logout Function
     const logOut = async () => {
         try {
             await signOut(firebaseAuth); // Properly sign out the user
             setUser(null); // Reset the user state
-            alert("Logout Successful");
+            // alert("Logout Successful");
+            toast.success("Logout Successful",{
+                style:{
+                    backgroundColor:'black',
+                    color:'white'
+                }
+            });
         } catch (error) {
             console.error("Error during logout:", error);
-            alert("Failed to logout. Please try again.");
+            // alert("Failed to logout. Please try again.");
+            toast.error("Error, Try Again",{
+                style:{
+                    backgroundColor:'black',
+                    color:'white'
+                }
+            });
         }
     };
 

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { assets } from "../Assets/assets";
 import { useFirebaseContext } from "../Context/Firebase";
+import toast from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 export default function Register_Page() {
 
@@ -24,8 +26,18 @@ export default function Register_Page() {
     e.preventDefault();
     await firebase
       .signInUserWithEmailAndPassword(email, password)
-      .then((res) => alert("Successful Login"))
-      .catch((error) => alert("Invalid Email/Password"));
+      .then((res) => toast.success("Login Successful",{
+        style:{
+          backgroundColor:'black',
+          color:'white',
+        }
+      }))
+      .catch((error) => toast.error("Error, Try Again",{
+        style:{
+          backgroundColor:'black',
+          color:'white',
+        }
+      }));
     setEmail("");
     setPassword("");
   };
@@ -81,8 +93,7 @@ export default function Register_Page() {
               <button
                 onClick={(e) => {
                   e.preventDefault();
-                  firebase.logOut();
-                }}
+                  firebase.logOut();}}
                 type="button"
                 className="w-[100%] bg-blue-800 text-white rounded-md py-3 text-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:bg-blue-700 shadow-lg hover:shadow-xl"
               >
@@ -112,6 +123,7 @@ export default function Register_Page() {
               className="w-[100%] max-w-[800px]"
             />
           </div>
+          <Toaster position="bottom-center"/>
         </form>
       </div>
     </>

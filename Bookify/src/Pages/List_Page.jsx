@@ -3,6 +3,8 @@ import { useState , useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { useFirebaseContext } from "../Context/Firebase";
 import Register_Page from "./Register_Page";
+import { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 export default function List_Page() {
 
@@ -17,6 +19,18 @@ export default function List_Page() {
   const [author, setAuthor] = useState("");
   const [coverImg, setCoverImg] = useState("");
 
+  // Notification for Listing Book
+  const notifyBookListed = () => {
+    toast.success("Your Book were Listed",
+    {
+      style:{
+        backgroundColor:'black',
+        color:'white',
+      }
+    }
+    )
+  };
+
   const handleList = async (e) => {
     e.preventDefault();
     await firebase.handleBooks(
@@ -27,15 +41,16 @@ export default function List_Page() {
       price,
       author,
       coverImg
-    );
-    setCategories("");
-    setCoverImg("");
-    setIsbn("");
-    setLanguage("");
-    setPrice("");
-    setTitle("");
-    setAuthor("");
-  };
+      );
+      setCategories("");
+      setCoverImg("");
+      setIsbn("");
+      setLanguage("");
+      setPrice("");
+      setTitle("");
+      setAuthor("");
+      notifyBookListed();
+    };
 
   // if( !firebase.isLoggedIn ){
   //   navigate("/login");
@@ -181,6 +196,7 @@ export default function List_Page() {
             </div>
           </div>
         </form>
+        <Toaster position="bottom-center"/>
       </div>
     </>
   );
