@@ -38,6 +38,6 @@ Bookify is a web application built using React and Firebase that allows users to
    ```
 ### Live Website
    ```bash
-   https://6759c7e882aab41dfc46f39f--deft-tiramisu-a0367d.netlify.app/
+   https://react-projects-bookify.vercel.app/
    ```
 
